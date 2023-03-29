@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fdbf00;
+}
+.card{
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+
+}
+.card:hover{
+    transform: rotate(-5deg);
+}
+.card:hover .outside{
+    transform: rotateY(-130deg);
+}
+.outside,.inside{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+
+}
+.inside{
+    background: linear-gradient(to left,#e0e0e0,#ffffff 30%);
+    line-height: 3px;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    left: 50%;
+
+}
+.outside{
+    background: linear-gradient(to left,#e0e0e0,#ffffff 30%);
+     
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin:left ;
+    z-index: 1;
+}
+ 
+
+ .fornt,.back{
+    height:100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0 deg);
+
+
+}
+.fornt{
+    background-color: #ffffff;
+    z-index: 1;
+
+}
+
+.back{
+    background: linear-gradient(to left,#e0e0e0,#ffffff 30%);
+
+    transform: rotateY(180 deg);
+}
+.cake{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.top-layer,
+.middle-layer,
+.bottom-layer{
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(
+        transparent 50px,
+        #fedbab 50px,
+        #fedbab 60px,
+        transparent 60px
+    ),radial-gradient(circle at 30px 5px,#994c10
+    30px,#fcbf29 31px );
+    border-radius: 10px 10px 0 0 ;
+    position: relative;
+    margin: auto;
+}
+.middle-layer{
+    transform: scale(0.85);
+    top: 6px;
+}
+.top-layer{
+    transform: scale(0.7);
+    top: 26px;
+}
+.bottom-layer{
+    margin-bottom: 15px;
+}
+.candle{
+    height: 45px;
+    width: 10px;
+    background-color: red;
+    border-radius: 2px;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right: 0;
+    bottom: 215px;
+}
+.candle::before{
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffa500;
+    border-radius: 0 50% 50% 50%;
+    bottom: 46px;
+    transform: rotate(45deg);
+    left: -2px;
+}
+.outside p{
+    font-size: 23px;
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 1;
+    color: #000046;
+}
+.img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 70px;
+}
+.inside P{
+    margin-top: 50px;
+    font-size: 20px;
+    height: 100px;
+}
